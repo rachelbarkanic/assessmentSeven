@@ -18,7 +18,7 @@ for (let i = 0; i < array.length; i++) {
 
 console.log(sumfunc(array, target))
 
-//the runtime for this function is
+//the runtime for this function is O(n^2)
 
 //2. UNIQUE CHARACTERS
 
@@ -27,3 +27,13 @@ console.log(sumfunc(array, target))
 //3. PANGRAM SENTENCE
 
 //4. LONGEST WORD
+
+const findLongestWord = (str) => {
+    var longestWord = str.split(' ').reduce(function(longest, currentWord) {
+      return currentWord.length > longest.length ? currentWord : longest;
+    }, "");
+    return longestWord.length;
+  }
+  console.log(findLongestWord("Hello, my name is Rachel"))
+
+  //The runtime of this function is O(n)
