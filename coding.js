@@ -38,6 +38,17 @@ const uniqueCharacters = (str) =>
 
 //3. PANGRAM SENTENCE
 
+const isPangram = (str) => {
+    return 'abcdefghijklmnopqrstuvwxyz'
+    .split('')
+    .every((x) => str.toLowerCase().includes(x));
+}
+
+console.log(isPangram('the quick brown fox jumps over the lazy dog'))
+
+//the runtime of this function is O(n)
+
+
 //4. LONGEST WORD
 
 const findLongestWord = (str) => {
